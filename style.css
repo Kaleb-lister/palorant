@@ -1,0 +1,602 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #111;
+}
+
+/* Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.logo:hover {
+    color: #ff4655;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff4655;
+}
+
+/* Download Button */
+.download-btn {
+    background-color: #ff4655;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.download-btn:hover {
+    background-color: #ffffff;
+    color: #ff4655;
+    transition: 0.5s;
+}
+
+
+
+/* foto awal */
+.fotoAwal{
+    background-image: url(./assets/apex-hero-medium-about-legends.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    
+}
+
+.opening{
+    width: 60%;
+    height: 60%;    
+    position: relative;
+    /* background-color: #fff; */
+}
+
+.play-button {
+    padding: 10px 20px;
+    background-color: #ff4655;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.play-button:hover {
+    background-color: #ffffff;
+    color: #ff4655;
+}
+
+.textopening{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 75px;
+    margin-left: 75px;
+    height: 60%;
+    width: 80%;
+    position: absolute;
+    align-content: center;
+    align-items: center;
+}
+
+/* deskripsi home*/
+.deskripsi-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+}
+
+.deskripsi-content{
+    width: 75%;
+    height: 75%;
+    background-color: black;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+.deskripsi-gambar{
+    width: 100%;
+    height: 50%;
+    background-image: url(./assets/e-distric.jpg);
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.deskripsi-tulisan{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    color: rgb(189, 176, 176);
+}
+
+/* agents terbaik */
+
+.judul{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.agents-terbaik{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+}
+
+.agents-box{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agents-kartu{
+    height: 100%;
+    width: 280px;
+    /* background-color: rgb(68, 60, 60); */
+    background: #2E2E30;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+    transition: 0.8s;
+}
+
+.agents-kartu:hover{
+    opacity: 100%;
+    height: 105%;
+    width: 285px;
+    border: 3px solid #ff4655;
+    border-radius: 5px;
+}
+
+.agents-gambar{
+    height: 70%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.agents-deskripsi{
+    height: 30%;
+    width: 100%;
+    background-color: rgb(45, 40, 40);
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    color: white;
+}
+
+/* news */
+
+.bignews-container{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bignews-box{
+    width: 800px;
+    height: 350px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    opacity: 60%;
+    transition: .8s;
+}
+
+.bignews-box:hover{
+    opacity: 90%;
+    width: 810px;
+    height: 360px;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.bignews-image{
+    height: 100%;
+    width: 70%;
+    border-radius: 10px 0 0 10px;
+    background-size: cover;
+}
+
+.bignews-deskripsi{
+    height: 100%;
+    width: 30%;
+    background-color: rgb(37, 37, 37);
+    border-radius: 0 10px 10px 0;
+    color: rgb(255, 255, 255);
+}
+
+.newscard-box{
+    height: 100%;
+    width: 250px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(68, 60, 60);
+    opacity: 60%;
+    transition: 0.8s;
+}
+
+.newscard-box:hover{
+    opacity: 100%;
+    height: 105%;
+    width: 255px;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.newscard-img{
+    height: 60%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+}
+
+.newscard-deskripsi{
+    height: 40%;
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    border-radius: 0 0 10px 10px;
+    color: white;
+    text-align: center;
+}
+
+.newscard-teks{
+    font-size: 12px;
+    margin: 0 5px 5px 0;
+}
+
+/* maps */
+.maps-container{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+.maps-box{
+    width: 50%;
+    height: 100%;
+    /* background-color: brown; */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.maps-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 10px;
+    transition: 0.8s;
+}
+
+.maps-img:hover{
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.maps-deskripsi{
+    width: 90%;
+    height: 90%;
+    /* background-color: rgb(37, 37, 37); */
+    border-radius: 0 0 10px 10px;
+    color: white;
+    margin: 10px;
+}
+
+/* Report Bugs */
+.bugs-container{
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.bugs-box{
+    width: 90%;
+    max-width: 500px;
+    background-color: #393a3b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input, select {
+    background-color: #16213e;
+    color: white;
+}
+
+textarea {
+    background-color: #16213e;
+    color: white;
+    height: 80px;
+}
+
+button {
+    background-color: #ff4655;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+/* Styling untuk checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-menu li {
+    display: inline;
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.footer-menu a:hover {
+    color: #ff4655;
+}
+
+.footer-jarak {
+    width: 100%;
+    height: 50px;
+}
+
+.footer-bottom {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #ff4655;
+    text-decoration: none;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; 
+        padding: 5px; 
+    }
+
+    .nav-links {
+        align-items: center; 
+    }
+
+    .nav-links li {
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .fotoAwal {
+        height: 60vh;
+    }
+
+    .textopening{
+        font-size: 20px;
+        height: 50px;
+        width: 100%;
+        margin-left: 0px;
+    }
+    .opening {
+        width: 90%; 
+    }
+    
+    .deskripsi-home {
+        flex-direction: column; 
+        height: auto;
+    }
+
+    .agents-terbaik {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    .agents-box {
+        width: 100%;
+        align-items: center;
+    }
+
+    .agents-gambar {
+        height: 200px;
+    }
+
+    .agents-kartu {
+        height: 80%;
+        width: 220px;
+        margin: 10px 10px;
+        font-size: 10px;
+    }
+
+    .agents-kartu:hover {
+        height: 85%;
+        width: 225px;
+    }
+
+    .judul{
+        font-size: 16px;
+        height: 110px;
+    }
+
+    .bignews-container {
+        
+        height: auto;
+    }
+
+    .bignews-deskripsi{
+        font-size: 10px;
+    }
+
+
+    .bignews-box {
+        width: 50%;
+        margin-left: 50px;
+        height: 200px;
+    }
+
+    .bignews-box:hover{
+        width: 55%;
+        height: 210px;
+    }
+
+    .newscard-box {
+        width: 22%;
+        margin: 10px 10px 10px 10px;
+        height: 200px;
+    }
+
+    .newscard-box:hover{
+        width: 27%;
+        height: 210px;
+    }
+    .newscard-deskripsi{
+        font-size: 10px;
+    }
+    .newscard-teks{
+        font-size: 8px;
+    }
+}

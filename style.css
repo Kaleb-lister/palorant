@@ -78,16 +78,22 @@ body {
 
 /* foto awal */
 .fotoAwal{
-    background-image: url(./assets/apex-hero-medium-about-legends.jpg);
-    background-size: cover;
-    background-position: center;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    
+    position: relative;
+}
+
+.fotoAwal video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .opening{
@@ -123,7 +129,7 @@ body {
     height: 60%;
     width: 80%;
     position: absolute;
-    align-content: center;
+    align-content: flex-start;
     align-items: center;
 }
 
@@ -137,11 +143,11 @@ body {
 }
 
 .deskripsi-content{
-    width: 75%;
+    width: 90%;
     height: 75%;
-    background-color: black;
     opacity: 0.9;
     border-radius: 10px;
+    background-color: #111111;
 }
 
 .deskripsi-gambar{
@@ -156,7 +162,8 @@ body {
     width: 100%;
     height: 50%;
     text-align: center;
-    color: rgb(189, 176, 176);
+    color: rgb(255, 255, 255);
+    background-color: #000000;
 }
 
 /* agents terbaik */
@@ -170,52 +177,73 @@ body {
     color: white;
 }
 
-.agents-terbaik{
-    display: flex;
+.agents-terbaik 
+{
+    padding-inline: 2rem;
+}
+
+.news-container {
+    padding-inline: 2rem;
+}
+
+.news-box {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    height: 100%;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 350px;
 }
 
 .agents-box{
-    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .agents-kartu{
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    width: 280px;
-    /* background-color: rgb(68, 60, 60); */
     background: #2E2E30;
-    margin-left: 50px;
-    margin-right: 50px;
     border-radius: 10px;
     transition: 0.8s;
+    border: 3px solid #000000;
+    overflow: hidden;
 }
 
 .agents-kartu:hover{
     opacity: 100%;
-    height: 105%;
-    width: 285px;
     border: 3px solid #ff4655;
     border-radius: 5px;
 }
 
+.agents-kartu:hover .agents-gambar{
+    scale: 1.1;
+}
+
 .agents-gambar{
-    height: 70%;
+    height: 200px;
     width: 100%;
     border-radius: 10px 10px 0 0;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    transition: .3s;
 }
 
 .agents-deskripsi{
-    height: 30%;
+    flex: 1;
+    position: relative;
+    z-index: 10;
+    padding-block:.5rem;
     width: 100%;
     background-color: rgb(45, 40, 40);
     text-align: center;
@@ -226,18 +254,20 @@ body {
 /* news */
 
 .bignews-container{
-    width: 100%;
+    width: 100vw;
     height: 350px;
     display: flex;
+    /* justify-content: space-evenly; */
     justify-content: center;
     align-items: center;
+    gap: 3rem;
+    padding-inline: 1rem;
 }
 
 .bignews-box{
-    width: 800px;
-    height: 350px;
-    margin-left: 30px;
-    margin-right: 30px;
+    max-width: 700px;
+    height: 300px;
+    width: 100%;
     border-radius: 10px;
     align-items: center;
     display: flex;
@@ -248,46 +278,67 @@ body {
 
 .bignews-box:hover{
     opacity: 90%;
-    width: 810px;
-    height: 360px;
     border: 3px solid white;
     border-radius: 5px;
 }
 
+
+
 .bignews-image{
     height: 100%;
-    width: 70%;
+    width: 60%;
     border-radius: 10px 0 0 10px;
     background-size: cover;
 }
 
+.newscard-box:hover .bignews-image{
+    scale: 1.1;
+}
+
 .bignews-deskripsi{
     height: 100%;
-    width: 30%;
+    width: 40%;
     background-color: rgb(37, 37, 37);
     border-radius: 0 10px 10px 0;
     color: rgb(255, 255, 255);
 }
 
 .newscard-box{
-    height: 100%;
-    width: 250px;
-    margin-left: 30px;
-    margin-right: 30px;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: rgb(68, 60, 60);
-    opacity: 60%;
+    height: 300px;
+    width: 250px;
+    background: #2E2E30;
+    border-radius: 10px;
     transition: 0.8s;
+    border: 3px solid #000000;
+    overflow: hidden;
+    opacity: 60%;
+    margin: auto;
+}
+
+.newscard-boxawal{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 250px;
+    background: #2E2E30;
+    border-radius: 10px;
+    transition: 0.8s;
+    border: 3px solid #000000;
+    overflow: hidden;
+    opacity: 60%;
+}
+
+.newscard-boxawal:hover{
+    opacity: 100%;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
 }
 
 .newscard-box:hover{
     opacity: 100%;
-    height: 105%;
-    width: 255px;
-    border: 3px solid white;
+    border: 3px solid #ffffff;
     border-radius: 5px;
 }
 
@@ -455,6 +506,7 @@ footer {
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 15px;
+    color: #ff4655;
 }
 
 .footer-menu {
@@ -495,6 +547,19 @@ footer {
 }
 
 
+.font-news-title{
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.font-news-deskripsi{
+    font-size: 12px;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .navbar {
@@ -531,72 +596,92 @@ footer {
         height: auto;
     }
 
-    .agents-terbaik {
-        flex-direction: column; 
-        height: auto; 
-    }
-
-    .agents-box {
-        width: 100%;
-        align-items: center;
-    }
-
-    .agents-gambar {
-        height: 200px;
-    }
-
-    .agents-kartu {
-        height: 80%;
-        width: 220px;
-        margin: 10px 10px;
-        font-size: 10px;
-    }
-
-    .agents-kartu:hover {
-        height: 85%;
-        width: 225px;
-    }
-
     .judul{
         font-size: 16px;
         height: 110px;
     }
 
-    .bignews-container {
-        
-        height: auto;
+    .deskripsi-tulisan{
+        background-color: #111111;
     }
 
     .bignews-deskripsi{
-        font-size: 10px;
+        font-size: 14px;
     }
 
-
-    .bignews-box {
-        width: 50%;
-        margin-left: 50px;
-        height: 200px;
+    .maps-deskripsi{
+        font-size: 14px;
     }
 
-    .bignews-box:hover{
-        width: 55%;
-        height: 210px;
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 18px;
     }
 
-    .newscard-box {
-        width: 22%;
-        margin: 10px 10px 10px 10px;
-        height: 200px;
+    .nav-links a {
+        font-size: 12px;
     }
 
-    .newscard-box:hover{
-        width: 27%;
-        height: 210px;
+    .download-btn {
+        font-size: 12px;
     }
-    .newscard-deskripsi{
-        font-size: 10px;
+
+    .play-button {
+        font-size: 12px;
+        bottom: 10px; 
     }
+
+    .deskripsi-tulisan{
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .judul{
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .agents-deskripsi{
+        font-size: 12px;
+    }
+   
     .newscard-teks{
-        font-size: 8px;
+        font-size: 10px;
+    }
+
+    .deskripsi-tulisan{
+        background-color: #111111;
+    }
+
+    .footer-jarak {
+        height: 15px;
+    }
+
+    .footer-logo h2 {
+        font-size: 18px;
+    }
+
+    .footer-menu a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+
+    .bignews-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .newscard-boxawal{
+        width: 100%;
+    }
+    .bignews-deskripsi{
+        font-size: 14px;
+    }
+    .maps-deskripsi{
+        font-size: 12px;
     }
 }
